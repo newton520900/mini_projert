@@ -1,0 +1,82 @@
+/* Ensure the navbar is always on top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* Makes sure it stays above other content */
+}
+/* Hero Section */
+.hero-section {
+  background: #f8f9fa;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+
+/* Make sure other elements in .App are behind the navbar */
+.App {
+  position: relative;
+  text-align: center;
+  padding-top: 60px; /* Adjust this based on navbar height */
+  z-index: 0;
+}
+
+body {
+  position: relative;
+  z-index: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
